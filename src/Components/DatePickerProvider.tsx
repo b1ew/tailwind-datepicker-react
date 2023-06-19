@@ -48,7 +48,7 @@ const DatePickerProvider = ({ children, options: customOptions, onChange, show, 
 	const options = { ...defaultOptions, ...customOptions }
 	const [view, setView] = useState<Views>("days")
 	const [selectedDate, setSelectedDate] = selectedDateState || useState<Date>(options?.defaultDate || new Date())
-	const [showSelectedDate, setShowSelectedDate] = useState<boolean>(false)
+	const [showSelectedDate, setShowSelectedDate] = useState<boolean>(!!options?.defaultDate)
 	const selectedMonth = selectedDate.getMonth()
 	const selectedYear = selectedDate.getFullYear()
 
