@@ -28,7 +28,7 @@ export const DatePickerContext = createContext<IDatePickerContext>({
 	setShow: () => {},
 	selectedDate: new Date(),
 	changeSelectedDate: () => {},
-	showSelectedDate: true,
+	showSelectedDate: false,
 	setShowSelectedDate: () => {},
 	selectedMonth: 0,
 	selectedYear: 0,

@@ -34,6 +34,7 @@ export interface IOptions {
 	weekDays?: string[]
 	disabledDates?: Date[]
 	inputNameProp?: string
+	placeholder?: string
 }
 
 const options: IOptions = {
@@ -54,7 +55,7 @@ const options: IOptions = {
 		selected: "",
 	},
 	datepickerClassNames: "",
-	defaultDate: new Date(),
+	defaultDate: undefined,
 	language: "en",
 	weekDays: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
 	inputNameProp: "date",
