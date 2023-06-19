@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, ReactElement, SetStateAction, useState } from "react"
+import React, { createContext, Dispatch, ReactElement, SetStateAction, useEffect, useState } from "react"
 import { IOptions } from "../Options"
 import defaultOptions from "../Options"
 import { getFormattedDate as formatDate } from "../Utils/date"
@@ -63,6 +63,10 @@ const DatePickerProvider = ({ children, options: customOptions, onChange, show, 
 	}
 
 	const getFormattedDate = (date: Date | number, formatOptions?: Intl.DateTimeFormatOptions) => formatDate(options?.language ? options?.language : "en", date, formatOptions)
+
+	useEffect(() => {
+		if (options.defaultDate) setSelectedDate(options.defaultDate)
+	}, [options.defaultDate])
 
 	return (
 		<DatePickerContext.Provider
