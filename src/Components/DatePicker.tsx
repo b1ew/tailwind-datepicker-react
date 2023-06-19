@@ -73,7 +73,7 @@ const Input = forwardRef<HTMLInputElement, { nameProp?: string }>((props, ref) =
 				"pl-9 pr-2.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
 				options?.theme?.input
 			)}
-			placeholder="Select Date"
+			placeholder="dd/mm/yyyy"
 			value={selectedDate && showSelectedDate ? getFormattedDate(selectedDate) : ""}
 			onFocus={() => setShow(true)}
 			readOnly
