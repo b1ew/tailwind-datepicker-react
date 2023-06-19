@@ -65,7 +65,10 @@ const DatePickerProvider = ({ children, options: customOptions, onChange, show, 
 	const getFormattedDate = (date: Date | number, formatOptions?: Intl.DateTimeFormatOptions) => formatDate(options?.language ? options?.language : "en", date, formatOptions)
 
 	useEffect(() => {
-		if (options.defaultDate) setSelectedDate(options.defaultDate)
+		if (options.defaultDate) {
+			setSelectedDate(options.defaultDate)
+			setShowSelectedDate(!!options.defaultDate)
+		}
 	}, [options.defaultDate])
 
 	return (
